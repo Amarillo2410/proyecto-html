@@ -1,0 +1,98 @@
+body {
+    height: 100vh;
+    font-family: Arial;
+    margin: 0; /* Elimina márgenes del body */
+    display: flex;
+    justify-content: center;
+    background: #708090;
+    gap: 50px;
+}
+
+.header {
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    background-size: cover; /* Asegura que la imagen cubra todo el espacio */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    animation: rotarimagenes 5s infinite; /* Cambia la imagen cada 15 segundos */
+}
+
+.titulo-central{
+    display: flex;
+    justify-content:flex-start;         
+    align-items: center;
+    gap:30px;
+
+}
+
+.boton{
+    flex: 0 0 auto;
+    width: 800px;
+    height: 150px;
+    border-radius: 75px;
+    background: url("/assets/imagenes/img-presentacion.webp") no-repeat center center;
+    background-size: cover;
+    box-shadow:  35px 35px 60px #666666,
+                 -35px -35px 60px #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    perspective: 1000px;
+    transition: transform 0.2s ease;
+    font-size: 1.2rem;
+    overflow: hidden;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000000;
+    animation: rotarimagenes 15s infinite;
+    margin-top:10px
+
+}
+
+.boton:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+@keyframes  rotarimagenes {
+    0% {
+        background: url("/assets/imagenes/img-presentacion.webp") no-repeat center center;
+        background-size: cover;
+    }
+    33.33% {
+        background: url("/assets/imagenes/rotacion1.jpg") no-repeat center center;
+        background-size: cover;
+}
+    66.66% {
+        background: url("/assets/imagenes/rotacion2.webp") no-repeat center center;
+        background-size: cover;
+    }
+    100% {
+        background: url("/assets/imagenes/img-presentacion.webp") no-repeat center center;
+        background-size: cover;
+    } 
+}
+
+.opciones{
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    font-size:1.5rem;
+    text-align: right;
+    flex-direction: column;
+}
+
+.opciones a{
+    color:white;
+    text-decoration: none;
+    border-bottom:2px solid white;
+    padding-bottom:5px;
+}
+
+.opciones a:hover{
+    color: #ffcc00;
+    border-bottom: 4px solid black;
+}
