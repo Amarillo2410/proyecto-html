@@ -1,98 +1,98 @@
-body {
-    height: 100vh;
-    font-family: Arial;
-    margin: 0; /* Elimina márgenes del body */
-    display: flex;
-    justify-content: center;
-    background: #708090;
-    gap: 50px;
+/* base */
+body{
+  min-height:100vh;
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#708090;
+  display:flex;
+  flex-direction:column; /* para header + main verticales */
 }
 
-.header {
-    width: 100%; /* Ocupa todo el ancho de la pantalla */
-    height: 100vh; /* Ocupa toda la altura de la pantalla */
-    background-size: cover; /* Asegura que la imagen cubra todo el espacio */
-    display: flex;
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
-    animation: rotarimagenes 5s infinite; /* Cambia la imagen cada 15 segundos */
+/* NAV: usamos GRID para tener 2 columnas */
+.opciones{
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* columna izquierda y derecha */
+  align-items: center;
+  padding: 12px 24px;
+  gap: 15px;
 }
 
+/* los dos bloques muestran sus enlaces en fila */
+.izquierda, .derecha {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+/* alineación específica */
+.izquierda { justify-content: flex-start; }
+.derecha  { justify-content: flex-end; }
+
+/* estilos links */
+.opciones a{
+  color: white;
+  text-decoration: none;
+  border-bottom: 2px solid white;
+  padding-bottom: 4px;
+  font-size: 18px;
+}
+.opciones a:hover{
+  color: #ffcc00;
+  border-bottom: 4px solid black;
+}
+
+/* título/hero (mantengo tu boton con estilo) */
 .titulo-central{
-    display: flex;
-    justify-content:flex-start;         
-    align-items: center;
-    gap:30px;
-
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding: 30px;
 }
 
 .boton{
-    flex: 0 0 auto;
-    width: 800px;
-    height: 150px;
-    border-radius: 75px;
-    background: url("/assets/imagenes/img-presentacion.webp") no-repeat center center;
-    background-size: cover;
-    box-shadow:  35px 35px 60px #666666,
-                 -35px -35px 60px #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    perspective: 1000px;
-    transition: transform 0.2s ease;
-    font-size: 1.2rem;
-    overflow: hidden;
-    color: white;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px #000000;
-    animation: rotarimagenes 15s infinite;
-    margin-top:10px
-
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  width: 800px;
+  max-width: 90%;
+  border-radius: 20px;
+  text-decoration:none;
+  color:white;
+  font-weight:bold;
+  text-shadow: 2px 2px 4px rgba(0,0,0,.6);
+  background: url("assets/imagenes/img-presentacion.webp") center/cover no-repeat;
+  object-fit: cover;
+  padding: 30px;
+  box-shadow:  25px 25px 50px rgba(0,0,0,.35);
 }
 
-.boton:hover{
-    transform: scale(1.05);
-    cursor: pointer;
-}
-
-@keyframes  rotarimagenes {
+/* si sigues usando animation en boton (opcional) */
+@keyframes rotarimagenes {  
     0% {
-        background: url("/assets/imagenes/img-presentacion.webp") no-repeat center center;
-        background-size: cover;
+        background: url("/assets/imagenes/img-presentacion.webp") center center / cover no-repeat;
     }
     33.33% {
-        background: url("/assets/imagenes/rotacion1.jpg") no-repeat center center;
-        background-size: cover;
-}
+        background: url("/assets/imagenes/rotacion1.jpg") center center / cover no-repeat;
+    }
     66.66% {
-        background: url("/assets/imagenes/rotacion2.webp") no-repeat center center;
-        background-size: cover;
+        background: url("/assets/imagenes/rotacion2.webp") center center / cover no-repeat;
     }
     100% {
-        background: url("/assets/imagenes/img-presentacion.webp") no-repeat center center;
-        background-size: cover;
-    } 
+        background: url("/assets/imagenes/img-presentacion.webp") center center / cover no-repeat;
+    }
 }
 
-.opciones{
-    display:flex;
+.boton { animation: rotarimagenes 15s infinite; }
+
+/* responsive: en móvil apilamos el menú (1 columna) */
+@media (max-width: 700px) {
+  .opciones {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .derecha, .izquierda {
     justify-content: center;
-    align-items: flex-start;
-    gap: 10px;
-    font-size:1.5rem;
-    text-align: right;
-    flex-direction: column;
-}
-
-.opciones a{
-    color:white;
-    text-decoration: none;
-    border-bottom:2px solid white;
-    padding-bottom:5px;
-}
-
-.opciones a:hover{
-    color: #ffcc00;
-    border-bottom: 4px solid black;
+  }
+  .boton { width: 100%; padding: 18px; }
 }
