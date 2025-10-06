@@ -311,8 +311,6 @@ body{
   text-decoration: underline;
 }
 
-
-
 .crecimiento {
   background: #1c1f26; /* fondo más oscuro */
   color: white;
@@ -362,11 +360,31 @@ body{
   color: #f0f0f0;
 }
 
+.product{
+  display: grid;
+  grid-template-rows:repeat(4,1fr);
+  grid-template-areas: none;
+
+}
+
 .productos {
+  grid-area: productos;
   text-align: center;
   padding: 60px 20px;
   background: #708090;
+  max-width: 1200px;
+  margin:0;
 }
+
+.productos2{
+  grid-area: productos2;
+  text-align: center;
+  padding: 60px 20px;
+  background: #708090;
+  max-width: 1200px;
+  margin:0;
+}
+
 
 .productos h1 {
   font-size: 2rem;
@@ -375,13 +393,7 @@ body{
   text-transform: uppercase;
 }
 
-/* GRID */
-.grid-productos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  justify-items: center;
-}
+
 
 /* TARJETAS */
 .tarjeta {
