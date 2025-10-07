@@ -3,7 +3,7 @@ body{
   min-height:100vh;
   margin:0;
   font-family: Arial, sans-serif;
-  background:#708090;
+  background-color:#708090 !important;
   display:flex;
   flex-direction:column; /* para header + main verticales */
 }
@@ -643,43 +643,363 @@ body {
 }
 
 
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* 🔹 Carrusel automático sin JS */
-.carrusel {
-  overflow: hidden;
-  width: 100%;
-  max-width: 700px;
-  height: 100%;
-  max-height:400px;
-  margin: 40px auto;
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 20px;
+}
+
+/* HEADER */
+header {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 30px;
+}
+
+/* DETALLE DEL PRODUCTO */
+.producto-detalle {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
   border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.carrusel-contenedor {
-  display: flex;
-  width: 400%;
-  animation: deslizar 16s infinite linear;
+.producto-detalle h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  text-align: center;
 }
 
-.carrusel-contenedor img {
-  width: 100%;
-  border-radius: 12px;
-  transition: opacity 0.5s ease;
+/* IMAGEN PRINCIPAL CON ZOOM */
+.imagen-principal {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-@keyframes deslizar {
-  0%, 20%   { transform: translateX(0); }
-  25%, 45%  { transform: translateX(-100%); }
-  50%, 70%  { transform: translateX(-200%); }
-  75%, 95%  { transform: translateX(-300%); }
-  100%      { transform: translateX(0); }
-}
-
-/* 🔹 Efecto zoom al pasar el cursor */
 .imagen-principal img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
   transition: transform 0.5s ease;
 }
 
 .imagen-principal img:hover {
   transform: scale(1.1);
 }
+
+/* DESCRIPCIÓN TÉCNICA */
+.descripcion {
+  margin-bottom: 30px;
+}
+
+.descripcion h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #444;
+}
+
+.descripcion p {
+  margin-bottom: 8px;
+}
+
+/* OPCIONES DE PERSONALIZACIÓN */
+.opciones {
+  margin-bottom: 30px;
+}
+
+.opciones h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #444;
+}
+
+.opciones label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.opciones select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* PRODUCTOS RELACIONADOS / CARRUSEL */
+.relacionados {
+  margin-top: 40px;
+}
+
+.relacionados h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 20px;
+}
+
+/* HEADER */
+header {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 30px;
+}
+
+/* DETALLE DEL PRODUCTO */
+.producto-detalle {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.producto-detalle h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  text-align: center;
+}
+
+/* IMAGEN PRINCIPAL CON ZOOM */
+.imagen-principal {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.imagen-principal img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.5s ease;
+}
+
+.imagen-principal img:hover {
+  transform: scale(1.1);
+}
+
+/* DESCRIPCIÓN TÉCNICA */
+.descripcion {
+  margin-bottom: 30px;
+}
+
+.descripcion h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #444;
+}
+
+.descripcion p {
+  margin-bottom: 8px;
+}
+
+/* OPCIONES DE PERSONALIZACIÓN */
+.opciones {
+  margin-bottom: 30px;
+}
+
+.opciones h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #444;
+}
+
+.opciones label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.opciones select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* PRODUCTOS RELACIONADOS */
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 20px;
+}
+
+/* HEADER */
+header {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 30px;
+}
+
+/* DETALLE DEL PRODUCTO */
+.producto-detalle {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.producto-detalle h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  text-align: center;
+}
+
+/* IMAGEN PRINCIPAL CON ZOOM */
+.imagen-principal {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.imagen-principal img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.5s ease;
+}
+
+.imagen-principal img:hover {
+  transform: scale(1.1);
+}
+
+/* DESCRIPCIÓN TÉCNICA */
+.descripcion {
+  margin-bottom: 30px;
+}
+
+.descripcion h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #444;
+}
+
+.descripcion p {
+  margin-bottom: 8px;
+}
+
+/* OPCIONES DE PERSONALIZACIÓN */
+.opciones {
+  margin-bottom: 30px;
+}
+
+.opciones h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #444;
+}
+
+.opciones label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.opciones select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* PRODUCTOS RELACIONADOS */
+.relacionados {
+  margin-top: 40px;
+}
+
+.relacionados h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  text-align: center;
+  size-adjust: cover;
+}
+
+/* CARRUSEL HORIZONTAL CON HOVER */
+.carrusel {
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  height: 300px; /* altura fija para imágenes */
+  margin: 0 auto;
+  border-radius: 12px;
+  position: relative;
+}
+
+.carrusel-contenedor {
+  display: flex;
+  flex-direction: row; /* ⬅️ ahora es horizontal */
+  width: 600%; /* 4 imágenes = 400% del ancho */
+ transition: transform 8s linear;
+ animation:giracarrusel 10s linear infinite;
+}
+
+
+.carrusel-contenedor img {
+  width: 100%;
+  height: 100%;
+  max-width:500px;
+  max-height:300px;
+  object-fit: cover;
+  flex-shrink: 0;
+  display:block;
+}
+
+@keyframes giracarrusel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.carrusel-contenedor img {
+  width: 100%;
+  height: 100%;
+  max-width:500px;
+  max-height:300px;
+  object-fit: cover;
+  flex-shrink: 0;
+  display:block;
+}
+
