@@ -1029,3 +1029,214 @@ header {
 .img-centro img:hover {
   transform: scale(1.03); /* pequeño efecto al pasar el mouse */
 }
+
+.mosaico {
+  padding: 40px 5%;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.mosaico h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+/* Contenedor del mosaico */
+.mosaico-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 180px;
+  gap: 10px;
+  max-width: 1100px;
+  margin: 0 auto;
+  grid-template-areas:
+    "img1 img2 img3 img4"
+    "img5 img6 img7 img8";
+}
+
+/* Asignar áreas */
+.img1 { grid-area: img1; }
+.img2 { grid-area: img2; }
+.img3 { grid-area: img3; }
+.img4 { grid-area: img4; }
+.img5 { grid-area: img5; }
+.img6 { grid-area: img6; }
+.img7 { grid-area: img7; }
+.img8 { grid-area: img8; }
+
+/* Estilos de las imágenes */
+.mosaico-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.mosaico-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive (tablets) */
+@media (max-width: 900px) {
+  .mosaico-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 160px;
+    max-width: 600px;
+  }
+}
+
+/* Responsive (móviles) */
+@media (max-width: 500px) {
+  .mosaico-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 200px;
+  }
+}
+/* --- Sección de contacto general --- */
+.contacto {
+  background-color: #f9f9f9;
+  padding: 60px 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.contacto h2 {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* --- Formulario --- */
+.form-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-contacto label {
+  font-weight: 600;
+  color: #333;
+  text-align: left;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+  padding: 10px 14px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  width: 100%;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* --- Estados de validación visual --- */
+
+/* Cuando el campo está vacío o inválido → rojo */
+.form-contacto input:invalid,
+.form-contacto textarea:invalid {
+  border-color: #e74c3c; /* rojo */
+  box-shadow: 0 0 3px rgba(231, 76, 60, 0.3);
+}
+
+/* Cuando el campo está correcto → verde */
+.form-contacto input:valid,
+.form-contacto textarea:valid {
+  border-color: #27ae60; /* verde */
+  box-shadow: 0 0 3px rgba(39, 174, 96, 0.3);
+}
+
+/* Focus (para ambos casos) */
+.form-contacto input:focus,
+.form-contacto textarea:focus {
+  outline: none;
+}
+
+/* Textarea más grande */
+.form-contacto textarea {
+  resize: none;
+  min-height: 100px;
+}
+
+/* --- Botón --- */
+.form-contacto button {
+  background-color: #111;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-contacto button:hover {
+  background-color: #333;
+}
+
+/* --- Información de contacto --- */
+.info-contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  font-size: 1rem;
+  color: #333;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.info-contacto p strong {
+  color: #000;
+}
+
+/* Redes sociales */
+.redes {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.redes a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.redes a:hover {
+  color: #555;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .contacto {
+    grid-template-columns: 1fr;
+    padding: 40px 5%;
+  }
+
+  .info-contacto {
+    align-items: center;
+    text-align: center;
+  }
+
+  .redes {
+    justify-content: center;
+  }
+}

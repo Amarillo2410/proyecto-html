@@ -3,44 +3,43 @@
 
 Relojería LuxTime es un sitio web diseñado para reflejar la elegancia, tradición y precisión de una marca relojera inspirada en la alta relojería suiza con raíces colombianas. El proyecto presenta la historia de la empresa, una galería de productos destacados y un formulario de contacto funcional, todo dentro de un diseño moderno y totalmente responsive que se adapta a distintos dispositivos.
 
+
 🌟 Características principales
 
-Diseño responsive compatible con computadoras, tabletas y dispositivos móviles.
+Catálogo interactivo con más de 20 relojes, cada uno con su nombre, precio y estado de disponibilidad.
 
-Sección “Nosotros” con historia detallada y línea del tiempo interactiva.
+Diseño responsive adaptado a tres dispositivos: computador, tableta y celular.
 
-Galería tipo mosaico que muestra modelos de relojes.
+Página de contacto con formulario validado que permite enviar mensajes a la empresa.
 
-Formulario de contacto funcional con validación básica de campos.
+Sección de presentación con información de la empresa, su lema e historia.
 
-Pie de página informativo con enlaces y datos de contacto.
+Pie de página informativo con nombre de la empresa, correo de contacto y enlace al repositorio de desarrollo.
+
 
 🧩 Estructura del proyecto
-/proyecto-luxtime
+proyecto-html
 │
-├── index.html              # Página principal (inicio)
-├── nosotros.html           # Página “Quiénes somos”
-├── contactanos.html        # Página de contacto
+├── index.html              
+├── nosotros.html           
+├── contactanos.html        
 │
-├── style.css/estilo.css    # Hoja de estilos principal
+├── style.css/estilo.css    
 │
 └── /assets
-    └── /imagenes           # Imágenes usadas en la galería y contenido
+    └── /imagenes           
 
 🛠️ Tecnologías utilizadas
 
-HTML5: estructura semántica del sitio.
+HTML: estructura semántica del sitio.
 
-CSS3: estilos, animaciones y diseño responsive con media queries.
+CSS: estilos, animaciones y diseño responsive con media queries.
+
 
 💡 Cómo visualizar el proyecto
 
-Descarga o clona este repositorio:
+[Relojeria](https://relojerias.netlify.app/)
 
-git clone https://github.com/Amarillo2410/proyecto-html
-
-
-Abre el archivo index.html en tu navegador.
 
 Navega entre las secciones Inicio, Nosotros y Contáctanos.
 
