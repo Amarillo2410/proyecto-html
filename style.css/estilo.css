@@ -1003,3 +1003,29 @@ header {
   display:block;
 }
 
+.img-centro {
+  display: flex;
+  flex-direction: column; /* uno debajo del otro */
+  align-items: center;    /* centrado horizontal */
+  gap: 25px;              /* espacio entre elementos */
+  margin: 40px 0;         /* separa del texto de arriba y abajo */
+}
+
+.img-centro h2 {
+  font-size: 1.6rem;
+  color: #fff; /* o el color que combine con tu fondo */
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.img-centro img {
+  width: 80%;             /* ajusta el tamaño de la imagen */
+  max-width: 600px;       /* evita que se agrande demasiado */
+  border-radius: 12px;    /* bordes suaves */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.img-centro img:hover {
+  transform: scale(1.03); /* pequeño efecto al pasar el mouse */
+}
